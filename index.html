@@ -7,6 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js"></script>
+    <h2>Sample XML</h2>
+    <p id ="name"></p>
+    <img src="" id ="picture">
+    <script>
+        const text = 
+        "<tutorial>" +
+        "<id>1</id>" +
+        "<name>Erickson</name>" +
+        "<picture>https://media.tenor.com/mT5L628K3yIAAAAd/fuck-you-fu.gif</picture>"
+        "</tutorial>" ;
+        var xmlDocument = new DOMParser().parseFromString(text , "text/xml");
+        var id = xmlDocument.getElementsByTagName("id")[0].childNodes[0].nodeValue;
+        var name = xmlDocument.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+        var picture = xmlDocument.getElementsByTagName("picture")[0].childNodes[0].nodeValue;
+        console.log(id, name);
+        document.getElementById("name").innerHTML = name;
+        var img = document.getElementById("picture");
+        img.src = picture;
+    </script>
+    <!--<script src="index.js"></script>-->
 </body>
 </html>
