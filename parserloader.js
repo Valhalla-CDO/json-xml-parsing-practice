@@ -3,8 +3,12 @@ fetch("http://localhost/practical/index.php").then(response => {
     return response.text();
 }).then(xmlString =>{
     const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
-    var food = xmlDocument.querySelector("name").textContent;
-    console.log(food);
+    var dishes= xmlDocument.querySelectorAll("food");
+
+    for(const food of dishes){
+        const name = food.querySelector("name").textContent;
+        console.log(name);
+    }
 })
 
 /*var xhttp = new XMLHttpRequest();
