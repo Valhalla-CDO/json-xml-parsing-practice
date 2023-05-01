@@ -9,3 +9,5 @@ console.log("Value: 3")
 console.log("Make statement")
 
 console.log("Hello Erickson")
+
+console.log("Hi")
