@@ -11,3 +11,5 @@ console.log("Make statement")
 console.log("Hello Erickson")
 
 console.log("Hi")
+
+console.log("update")
